@@ -1,0 +1,16 @@
+C:\Users\efe21\customer-management\CustomerManagement.Application\bin\Debug\net9.0\CustomerManagement.Application.deps.json
+C:\Users\efe21\customer-management\CustomerManagement.Application\bin\Debug\net9.0\CustomerManagement.Application.dll
+C:\Users\efe21\customer-management\CustomerManagement.Application\bin\Debug\net9.0\CustomerManagement.Application.pdb
+C:\Users\efe21\customer-management\CustomerManagement.Application\bin\Debug\net9.0\CustomerManagement.Domain.dll
+C:\Users\efe21\customer-management\CustomerManagement.Application\bin\Debug\net9.0\CustomerManagement.Domain.pdb
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.csproj.AssemblyReference.cache
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.AssemblyInfoInputs.cache
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.AssemblyInfo.cs
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.sourcelink.json
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\Customer.ED26E553.Up2Date
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.dll
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\refint\CustomerManagement.Application.dll
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\CustomerManagement.Application.pdb
+C:\Users\efe21\customer-management\CustomerManagement.Application\obj\Debug\net9.0\ref\CustomerManagement.Application.dll

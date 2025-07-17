@@ -1,0 +1,12 @@
+C:\Users\efe21\customer-management\CustomerManagement.Domain\bin\Debug\net9.0\CustomerManagement.Domain.deps.json
+C:\Users\efe21\customer-management\CustomerManagement.Domain\bin\Debug\net9.0\CustomerManagement.Domain.dll
+C:\Users\efe21\customer-management\CustomerManagement.Domain\bin\Debug\net9.0\CustomerManagement.Domain.pdb
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.AssemblyInfo.cs
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.sourcelink.json
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.dll
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\refint\CustomerManagement.Domain.dll
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\CustomerManagement.Domain.pdb
+C:\Users\efe21\customer-management\CustomerManagement.Domain\obj\Debug\net9.0\ref\CustomerManagement.Domain.dll

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Jey5z3lfe7w=",
+  "dgSpecHash": "BpmNATPLUlQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\efe21\\customer-management\\CustomerManagement.Infrastructure\\CustomerManagement.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\efe21\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
+    "C:\\Users\\efe21\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\efe21\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
