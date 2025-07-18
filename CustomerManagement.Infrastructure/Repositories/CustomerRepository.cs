@@ -21,16 +21,6 @@ namespace CustomerManagement.Infrastructure.Repositories
                 "GetAllCustomers",
                 commandType: CommandType.StoredProcedure
             );
-
-            foreach (var customer in customers)
-            {
-                if (!string.IsNullOrEmpty(customer.AdressJson))
-                {
-                    // Eğer Adress nesnesi tanımlıysa deserialize edebilirsin.
-                    // Örnek: var address = JsonSerializer.Deserialize<Address>(customer.AdressJson);
-                }
-            }
-
             return customers;
         }
 
@@ -39,7 +29,7 @@ namespace CustomerManagement.Infrastructure.Repositories
             var parameters = new DynamicParameters();
             parameters.Add("@FullName", customer.FullName);
             parameters.Add("@Email", customer.Email);
-            parameters.Add("@AdressJson", customer.AdressJson); // DB'deki kolonla birebir olmalı
+            parameters.Add("@AdressJson", customer.AdressJson); 
 
             var newId = await _dbConnection.ExecuteScalarAsync<int>(
                 "AddCustomer",
@@ -49,5 +39,25 @@ namespace CustomerManagement.Infrastructure.Repositories
 
             return newId;
         }
+
+        public async Task<bool> UpdateCustomerAsync(int id, string fullName, string email, string adressJson)
+        {
+            var sql = @"UPDATE Customers 
+            SET FullName = @FullName, Email = @Email, AdressJson = @AdressJson 
+            WHERE Id = @Id";
+
+            var result = await _dbConnection.ExecuteAsync(sql, new { Id = id, FullName = fullName, Email = email, AdressJson = adressJson });
+            return result > 0;
+        }
+        public async Task<bool> DeleteCustomerAsync(int id)
+        {
+            var sql = "DELETE FROM Customers WHERE Id = @Id";
+            var result = await _dbConnection.ExecuteAsync(sql, new { Id = id });
+            return result > 0;
+        }
+
+
     }
+
+
 }

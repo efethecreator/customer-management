@@ -6,6 +6,8 @@ namespace CustomerManagement.Application.Interfaces
     {
         Task<IEnumerable<Customer>> GetAllCustomersAsync();
         Task<int> AddCustomerAsync(Customer customer);
+        Task<bool> UpdateCustomerAsync(int id, string fullName, string email, string adressJson);
+        Task<bool> DeleteCustomerAsync(int id);
 
     }
 }
