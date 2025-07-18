@@ -88,10 +88,10 @@ http://localhost:8080/swagger
 
 ---
 
-## 📌 Teknik Notlar
+## Teknik Notlar
 
 - `AdressJson`, `Address` modelini **JSON** formatında saklar.
 - **Dapper** kullanılarak `SQL Server` ile hızlı veri erişimi sağlanır.
-- CQRS ile GET ve POST işlemleri ayrı handler'lar üzerinden yönetilir.
+- CQRS deseni ile `Command` ve `Query` işlemleri farklı `Handler` sınıflarında ayrıştırılmıştır.
 - `Program.cs` içinde veritabanı, tablo ve prosedür kontrolleri gerçekleştirilir.
 
