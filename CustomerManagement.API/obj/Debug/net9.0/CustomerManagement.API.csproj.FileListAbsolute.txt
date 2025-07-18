@@ -99,3 +99,4 @@ C:\Users\efe21\customer-management\CustomerManagement.API\bin\Debug\net9.0\Custo
 C:\Users\efe21\customer-management\CustomerManagement.API\bin\Debug\net9.0\CustomerManagement.Application.pdb
 C:\Users\efe21\customer-management\CustomerManagement.API\bin\Debug\net9.0\CustomerManagement.Infrastructure.pdb
 C:\Users\efe21\customer-management\CustomerManagement.API\bin\Debug\net9.0\CustomerManagement.Domain.pdb
+C:\Users\efe21\customer-management\CustomerManagement.API\bin\Debug\net9.0\appsettings.Docker.json

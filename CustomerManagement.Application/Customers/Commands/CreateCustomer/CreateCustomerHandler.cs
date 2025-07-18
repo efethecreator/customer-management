@@ -19,8 +19,10 @@ namespace CustomerManagement.Application.Customers.Commands.CreateCustomer
             {
                 FullName = request.FullName,
                 Email = request.Email,
-                AdressJson = request.AdressJson
+                Address = request.Address
             };
+
+            customer.SerializeAddress(); 
 
             var createdCustomerId = await _customerRepository.AddCustomerAsync(customer);
             return createdCustomerId;

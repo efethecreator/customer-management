@@ -21,6 +21,12 @@ namespace CustomerManagement.Infrastructure.Repositories
                 "GetAllCustomers",
                 commandType: CommandType.StoredProcedure
             );
+
+            foreach (var c in customers)
+            {
+                c.DeserializeAddress(); // JSON'dan modele dönüştür
+            }
+
             return customers;
         }
 
@@ -29,7 +35,9 @@ namespace CustomerManagement.Infrastructure.Repositories
             var parameters = new DynamicParameters();
             parameters.Add("@FullName", customer.FullName);
             parameters.Add("@Email", customer.Email);
-            parameters.Add("@AdressJson", customer.AdressJson); 
+
+            customer.SerializeAddress(); // modeli JSON string'e çevir
+            parameters.Add("@AdressJson", customer.AdressJson);  // JSON serialized
 
             var newId = await _dbConnection.ExecuteScalarAsync<int>(
                 "AddCustomer",
@@ -43,21 +51,18 @@ namespace CustomerManagement.Infrastructure.Repositories
         public async Task<bool> UpdateCustomerAsync(int id, string fullName, string email, string adressJson)
         {
             var sql = @"UPDATE Customers 
-            SET FullName = @FullName, Email = @Email, AdressJson = @AdressJson 
-            WHERE Id = @Id";
+                        SET FullName = @FullName, Email = @Email, AdressJson = @AdressJson 
+                        WHERE Id = @Id";
 
             var result = await _dbConnection.ExecuteAsync(sql, new { Id = id, FullName = fullName, Email = email, AdressJson = adressJson });
             return result > 0;
         }
+
         public async Task<bool> DeleteCustomerAsync(int id)
         {
             var sql = "DELETE FROM Customers WHERE Id = @Id";
             var result = await _dbConnection.ExecuteAsync(sql, new { Id = id });
             return result > 0;
         }
-
-
     }
-
-
 }

@@ -1,5 +1,7 @@
 using CustomerManagement.Application.Interfaces;
+using CustomerManagement.Domain.Entities;
 using MediatR;
+using System.Text.Json;
 
 namespace CustomerManagement.Application.Customers.Commands.UpdateCustomer
 {
@@ -14,7 +16,10 @@ namespace CustomerManagement.Application.Customers.Commands.UpdateCustomer
 
         public async Task<bool> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
-            return await _repository.UpdateCustomerAsync(request.Id, request.FullName, request.Email, request.AdressJson);
+            
+            string addressJson = JsonSerializer.Serialize(request.Address);
+
+            return await _repository.UpdateCustomerAsync(request.Id, request.FullName, request.Email, addressJson);
         }
     }
 }
