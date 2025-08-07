@@ -1,36 +1,30 @@
 # Customer Management API
 
-Bu proje, .NET Core 8.0, CQRS, Dapper ve SQL Server kullanılarak geliştirilmiş bir **müşteri yönetim sistemidir**. Uygulama **Docker** ortamında container bazlı olarak çalışır ve **Swagger** arayüzü ile kolayca test edilebilir.
+This project is a customer management system developed using .NET Core 8.0, CQRS, Dapper, and SQL Server. The application runs in a container-based Docker environment and can be easily tested through the Swagger interface.
 
----
+## Features
 
-## Özellikler
+- Layered architecture (API, Application, Domain, Infrastructure)  
+- CQRS design pattern (Command / Query separation)  
+- Independent operation management with MediatR  
+- Fast and lightweight data access with Dapper  
+- Stored Procedure usage on SQL Server  
+- Storing address data in JSON format (AdressJson)  
+- Swagger UI integration  
+- Quick setup with Docker Compose  
 
-- Katmanlı mimari yapısı (API, Application, Domain, Infrastructure)
-- CQRS tasarım deseni (Command / Query ayrımı)
-- MediatR ile bağımsız işlem yönetimi
-- Dapper ile hızlı ve sade veri erişimi
-- SQL Server üzerinde Stored Procedure kullanımı
-- JSON formatında adres verisi saklama (AdressJson)
-- Swagger UI entegrasyonu
-- Docker Compose ile hızlı kurulum
+## Technologies
 
----
+- .NET Core 8.0  
+- CQRS Pattern  
+- MediatR  
+- Dapper  
+- SQL Server  
+- Stored Procedure  
+- Swagger  
+- Docker & Docker Compose  
 
-## Teknolojiler
-
-- **.NET Core 8.0**
-- **CQRS Pattern**
-- **MediatR**
-- **Dapper**
-- **SQL Server**
-- **Stored Procedure**
-- **Swagger**
-- **Docker & Docker Compose**
-
----
-
-## Proje Mimarisi
+## Project Architecture
 
 ```
 ├── CustomerManagement.API
@@ -46,52 +40,46 @@ Bu proje, .NET Core 8.0, CQRS, Dapper ve SQL Server kullanılarak geliştirilmi�
 
 ---
 
-## Kurulum ve Çalıştırma
+## Setup and Run
 
-> Projeyi ayağa kaldırmadan önce sisteminizde **Docker** kurulu olduğundan emin olun.
+Before starting the project, make sure Docker is installed on your system.
 
-### Adımlar:
+### Steps:
 
 ```bash
 docker compose up --build
 ```
 
-Uygulama başlatıldığında Swagger arayüzü aşağıdaki adresten erişilebilir olur:
+Once the application is up and running, the Swagger interface can be accessed at:
 
 ```
 http://localhost:8080/swagger
 ```
 
----
+## Database Structure
 
-## Veritabanı Yapısı
+**Table: Customers**
 
-**Tablo: `Customers`**
+| Column      | Data Type       |
+|-------------|-----------------|
+| Id          | INT, Identity   |
+| FullName    | NVARCHAR(100)   |
+| Email       | NVARCHAR(100)   |
+| AdressJson  | NVARCHAR(MAX)   |
 
-| Kolon       | Veri Tipi         |
-|-------------|-------------------|
-| Id          | INT, Identity      |
-| FullName    | NVARCHAR(100)      |
-| Email       | NVARCHAR(100)      |
-| AdressJson  | NVARCHAR(MAX)      |
+## Stored Procedures
 
----
+| Name           | Description              |
+|----------------|--------------------------|
+| AddCustomer    | Adds a new customer      |
+| GetAllCustomers| Lists all customers      |
 
-## Stored Procedure'ler
+Note: The creation of this table and the procedures is automatically handled in `Program.cs` when the application starts.
 
-| Adı              | Açıklama                     |
-|------------------|------------------------------|
-| `AddCustomer`     | Yeni müşteri ekler           |
-| `GetAllCustomers` | Tüm müşterileri listeler     |
+## Technical Notes
 
-> Not: Uygulama başlatıldığında **Program.cs** dosyasında bu tablo ve prosedürlerin otomatik oluşturulması sağlanır.
-
----
-
-## Teknik Notlar
-
-- `AdressJson`, `Address` modelini **JSON** formatında saklar.
-- **Dapper** kullanılarak `SQL Server` ile hızlı veri erişimi sağlanır.
-- CQRS deseni ile `Command` ve `Query` işlemleri farklı `Handler` sınıflarında ayrıştırılmıştır.
-- `Program.cs` içinde veritabanı, tablo ve prosedür kontrolleri gerçekleştirilir.
+- `AdressJson` stores the Address model in JSON format.  
+- Data access is performed efficiently using Dapper with SQL Server.  
+- The CQRS pattern separates Command and Query operations into different Handler classes.  
+- Database, table, and procedure checks are handled in `Program.cs`.  
 
